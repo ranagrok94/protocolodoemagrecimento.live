@@ -27,7 +27,28 @@
       }
     </style>
         
-<script type="text/javascript">
+<!-- GTM CODE -->
+<script>
+// Load GTM for everyone except PageSpeed Insight Tool
+if(navigator.userAgent.indexOf("Chrome-Lighthouse") == -1) { 
+
+// Google Tag Manager as Payload for all 3rd-party JS
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WBQN47T’);
+// please replace GTM-WBQN47T with own GTM ID
+ }
+</script>
+
+<!-- END GTM CODE -->
+
+</head>
+<body>
+        
+ <!-- Back redirect -->
+	<script type="text/javascript">
         (function (b) {
             var a = {
                 version: "0.0.1",
@@ -40,7 +61,7 @@
                 hasChanged: function () {
                     if (b.location.hash == "#no-back") {
                         b.location.hash = "#";
-                        b.location.href = "(https://protocolodoemagrecimento.live/BK/bonus/)";
+                        b.location.href = "/BK/bonus/";
                     }
                 },
                 
@@ -62,7 +83,7 @@
                             history.pushState(null, "", "#");
                         } else {
                             b.location.hash = "#";
-                            b.location.href = "(https://protocolodoemagrecimento.live/BK/bonus/)";
+                            b.location.href = "/BK/bonus/";
                         }
                     }
                     a.checkCompat();
@@ -83,25 +104,8 @@
             a.init();
         }(window));
     </script>
-
-<script>
-// Load GTM for everyone except PageSpeed Insight Tool
-if(navigator.userAgent.indexOf("Chrome-Lighthouse") == -1) { 
-
-// Google Tag Manager as Payload for all 3rd-party JS
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WBQN47T’);
-// please replace GTM-WBQN47T with own GTM ID
- }
-</script>
-
-<!-- END GTM CODE -->
-
-</head>
-<body>
+<!-- End Back Redirect -->
+        
 <header class="py-4">
 <div class="container">
 <div class="row justify-content-center">
