@@ -195,65 +195,24 @@ img.emoji {
 </div>
 <div class="elementor-element elementor-element-31ce591 elementor-widget elementor-widget-html" data-id="31ce591" data-element_type="widget" data-widget_type="html.default">
 <div class="elementor-widget-container">
-
-    
-    <!-- Back redirect -->
-<script type="text/javascript">
-        (function (b) {
-            var a = {
-                version: "0.0.1",
-                history_api: typeof history.pushState !== "undefined",
-                init: function () {
-                    b.location.hash = "#no-back";
-                    a.configure();
-                },
-                
-                hasChanged: function () {
-                    if (b.location.hash == "#no-back") {
-                        b.location.hash = "#";
-                        b.location.href = "(https://google.com)";
-                    }
-                },
-                
-                checkCompat: function () {
-                    if (b.addEventListener) {
-                        b.addEventListener("hashchange", a.hasChanged, false);
-                    } else {
-                        if (b.attachEvent) {
-                            b.attachEvent("onhashchange", a.hasChanged);
-                        } else {
-                            b.onhashchange = a.hasChanged;
-                        }
-                    }
-                },
-                
-                configure: function () {
-                    if (b.location.hash == "#no-back") {
-                        if (this.history_api) {
-                            history.pushState(null, "", "#");
-                        } else {
-                            b.location.hash = "#";
-                            b.location.href = "(https://google.com)";
-                        }
-                    }
-                    a.checkCompat();
-                    a.hasChanged();
-                }
-            };
-            if (typeof define === "function" && define.amd) {
-                define(function () {
-                    return a;
-                });
-            } else {
-                if (typeof module === "object" && module.exports) {
-                    module.exports = a;
-                } else {
-                    b.noback = a;
-                }
-            }
-            a.init();
-        }(window));
-    </script></div>
+	
+ <!-- Back redirect -->
+	<script>
+function backquente(){
+    var back_redirect_back_link = 'www.google.com/';
+    history['pushState']({}, '', location['href']);
+    history['pushState']({}, '', location['href']);
+    window['onpopstate'] = function() {
+    setTimeout(function() {
+        location['href'] = back_redirect_back_link
+    }, 1)
+    }
+}
+setTimeout("backquente()", 0); //10 segundos / 0,10 min em ms
+</script>
+<!-- End Back Redirect -->
+	
+</div>
 </div>
 <div class="elementor-element elementor-element-df91099 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-text-editor" data-id="df91099" data-element_type="widget" data-widget_type="text-editor.default">
 <div class="elementor-widget-container">
